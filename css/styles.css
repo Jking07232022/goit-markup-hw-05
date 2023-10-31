@@ -23,6 +23,7 @@ body {
 }
 .container {
     width: 1440px;
+    margin-left: 0px;
 }
 .section .list {
     gap: 24px;
@@ -133,6 +134,47 @@ body {
 .hero-btn:hover {
     cursor: pointer;
     background-color: var(--ocean);
+}
+.modal {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-content {
+    background-color: var(--white);
+    width: 408px;
+    height: 584px;
+    border-radius: 4px;
+}
+.is-hidden {
+    pointer-events: none;
+    opacity: 0;
+}
+.modal-close-btn {
+    border-radius: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--cornflower);
+    width: 24px;
+    height: 24px;
+    color: var(--slate);
+    margin-left: auto;
+    display: block;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 24px;
+    margin-top: 24px;
+}
+.modal-close-btn:hover {
+    fill: currentColor;
+    border: 1px solid currentColor;
 }
         /* Section About What-we-do Team */
 .section {
